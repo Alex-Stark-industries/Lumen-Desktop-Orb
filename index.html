@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lumen — a tiny voice orb for your desktop</title>
+<meta name="description" content="A tiny voice orb that lives on your desktop. Right-click for instant, spoken answers — no language model, no cloud, no subscription." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%2348b0e0%22/></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #070b12;
+    --bg-2: #0b111c;
+    --panel: #0d1420;
+    --border: rgba(95, 184, 224, 0.22);
+    --text: #e7f3fb;
+    --muted: #93a8bb;
+    --accent: #5fb8e0;
+    --accent-bright: #8fe3ff;
+    --accent-glow: rgba(95, 184, 224, 0.35);
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+  h1, h2, h3, .brand { font-family: 'Outfit', system-ui, sans-serif; }
+  a { color: var(--accent-bright); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(7, 11, 18, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1040px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 18px; letter-spacing: 0.02em; }
+  .brand-dot {
+    width: 14px; height: 14px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, var(--accent-bright), var(--accent) 60%, #1c3c58);
+    box-shadow: 0 0 14px var(--accent-glow);
+  }
+  .nav-links { display: flex; gap: 28px; font-size: 14px; color: var(--muted); }
+  .nav-links a { color: var(--muted); text-decoration: none; }
+  .nav-links a:hover { color: var(--text); }
+
+  .hero {
+    padding: 88px 24px 64px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute; inset: -20% -10% auto -10%; height: 480px;
+    background: radial-gradient(ellipse at 50% 0%, rgba(95,184,224,0.16), transparent 70%);
+    pointer-events: none;
+  }
+  #hero-orb { display: block; margin: 0 auto 28px; }
+  .eyebrow {
+    display: inline-block; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--accent-bright); border: 1px solid var(--border); border-radius: 999px;
+    padding: 6px 14px; margin-bottom: 22px;
+  }
+  h1 {
+    font-size: clamp(32px, 5vw, 52px); font-weight: 700; line-height: 1.12;
+    margin: 0 0 18px; text-wrap: balance;
+  }
+  h1 .glow { color: var(--accent-bright); text-shadow: 0 0 30px var(--accent-glow); }
+  .sub {
+    font-size: 18px; color: var(--muted); max-width: 560px; margin: 0 auto 34px; line-height: 1.55;
+  }
+  .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 26px; border-radius: 10px; font-weight: 600; font-size: 15px;
+    text-decoration: none; transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn-primary {
+    background: linear-gradient(180deg, var(--accent-bright), var(--accent));
+    color: #061019;
+    box-shadow: 0 8px 28px rgba(95, 184, 224, 0.35);
+  }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 12px 34px rgba(95, 184, 224, 0.45); }
+  .btn-ghost {
+    background: transparent; color: var(--text); border: 1px solid var(--border);
+  }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent-bright); }
+  .fine-print { margin-top: 16px; font-size: 13px; color: var(--muted); }
+
+  section { padding: 64px 24px; }
+  .section-title { text-align: center; margin-bottom: 44px; }
+  .section-title h2 { font-size: 28px; margin: 0 0 10px; }
+  .section-title p { color: var(--muted); margin: 0; }
+
+  .grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  }
+  .card {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 14px;
+    padding: 24px; text-align: left;
+  }
+  .card .icon { font-size: 22px; margin-bottom: 12px; }
+  .card h3 { font-size: 16px; margin: 0 0 8px; }
+  .card p { font-size: 14px; color: var(--muted); margin: 0; line-height: 1.55; }
+
+  .shots {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  }
+  .shot { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+  .shot img { display: block; width: 100%; height: auto; background: #05080d; }
+  .shot-caption { padding: 14px 18px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--border); }
+
+  .install { background: var(--bg-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .steps { counter-reset: step; display: grid; gap: 18px; max-width: 620px; margin: 0 auto; }
+  .step { display: flex; gap: 16px; align-items: flex-start; }
+  .step-num {
+    flex: none; width: 30px; height: 30px; border-radius: 50%;
+    background: rgba(95,184,224,0.12); border: 1px solid var(--border);
+    color: var(--accent-bright); font-weight: 600; font-size: 14px;
+    display: grid; place-items: center;
+  }
+  .step p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.6; }
+  .step strong { color: var(--text); }
+
+  footer {
+    padding: 40px 24px 60px; text-align: center; color: var(--muted); font-size: 13px;
+  }
+  footer a { color: var(--muted); text-decoration: underline; }
+  footer p { max-width: 520px; margin: 8px auto; line-height: 1.6; }
+
+  @media (max-width: 760px) {
+    .grid { grid-template-columns: 1fr; }
+    .shots { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand"><span class="brand-dot"></span> Lumen</div>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#install">Install</a>
+      <a href="https://github.com/Alex-Stark-industries/Lumen-Desktop-Orb">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <canvas id="hero-orb" width="160" height="160"></canvas>
+  <div class="eyebrow">Free · Windows · No account</div>
+  <h1>A tiny voice orb that<br><span class="glow">lives on your desktop.</span></h1>
+  <p class="sub">Right-click it. Pick a command. Lumen answers instantly, out loud —
+    the time, the weather, a web search, any app you name. No language model,
+    no cloud, no subscription.</p>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="https://github.com/Alex-Stark-industries/Lumen-Desktop-Orb/releases/latest">⬇ Download for Windows</a>
+    <a class="btn btn-ghost" href="https://github.com/Alex-Stark-industries/Lumen-Desktop-Orb">View on GitHub</a>
+  </div>
+  <p class="fine-print">Free installer · No admin rights needed · ~500 MB</p>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <div class="section-title">
+      <h2>Instant, on purpose</h2>
+      <p>Every command is a small fixed routine — not a model deciding what to do.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>No waiting</h3>
+        <p>No language model means no "thinking" delay — every quick command answers the moment you click it.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🎙️</div>
+        <h3>A real voice</h3>
+        <p>Replies are spoken with a proper on-device neural voice, downloaded once and then fully offline.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🖱️</div>
+        <h3>One menu, everything</h3>
+        <p>Right-click the orb for a clean custom menu. No windows to manage, no settings screens to dig through.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🌦️</div>
+        <h3>Weather &amp; web search</h3>
+        <p>The few commands that need a detail just ask for it inline — type a city, a search, or an app name.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🪶</div>
+        <h3>Small and quiet</h3>
+        <p>No multi-gigabyte model, no background service eating your RAM. It only ever downloads the voice itself.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🔒</div>
+        <h3>Private by default</h3>
+        <p>No accounts, no telemetry, no analytics. The only network use is the voice download and the two commands that are explicitly about the outside world.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="screenshots">
+  <div class="wrap">
+    <div class="section-title">
+      <h2>See it in action</h2>
+      <p>A living particle sphere, and a menu that's the whole interface.</p>
+    </div>
+    <div class="shots">
+      <div class="shot">
+        <img src="docs/screenshots/orb.png" alt="The Lumen orb, idle on the desktop" />
+        <div class="shot-caption">The orb — idle, drifting quietly on the desktop.</div>
+      </div>
+      <div class="shot">
+        <img src="docs/screenshots/menu.png" alt="Lumen's right-click command menu" />
+        <div class="shot-caption">Right-click menu — every command, one click away.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="install" id="install">
+  <div class="wrap">
+    <div class="section-title">
+      <h2>Get started in a minute</h2>
+      <p>No dependencies to install first — unlike bigger AI assistants.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <p><strong>Download</strong> the installer from the <a href="https://github.com/Alex-Stark-industries/Lumen-Desktop-Orb/releases/latest">latest release</a>.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <p><strong>Run it.</strong> No administrator rights needed — it installs just for your account. Windows SmartScreen may warn you since the installer isn't code-signed; click <em>More info → Run anyway</em>.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <p><strong>Right-click the orb</strong> that appears in the bottom-right of your screen, and try <em>Time</em> — that's the whole interaction model.</p>
+      </div>
+    </div>
+    <div class="cta-row" style="margin-top: 32px;">
+      <a class="btn btn-primary" href="https://github.com/Alex-Stark-industries/Lumen-Desktop-Orb/releases/latest">⬇ Download for Windows</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand" style="justify-content:center; margin-bottom: 8px;"><span class="brand-dot"></span> Lumen</div>
+  <p>Free and open, MIT licensed. Not affiliated with, sponsored by, or
+    associated with any film, game, franchise, or brand. "Lumen" is simply
+    Latin for "light".</p>
+  <p><a href="https://github.com/Alex-Stark-industries/Lumen-Desktop-Orb">GitHub</a> ·
+    <a href="https://github.com/Alex-Stark-industries/Lumen-Desktop-Orb/blob/main/WELCOME.md">Welcome guide</a> ·
+    <a href="https://github.com/Alex-Stark-industries/Lumen-Desktop-Orb/blob/main/GUIDE.md">Command guide</a></p>
+</footer>
+
+<script>
+  // A small, self-contained live preview of the orb for the hero — the same
+  // idea as the app's own particle sphere (golden-angle distribution,
+  // additive blending, a core that breathes), simplified for a static page.
+  const canvas = document.getElementById("hero-orb");
+  const ctx = canvas.getContext("2d");
+  const SIZE = 160;
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  canvas.width = SIZE * dpr;
+  canvas.height = SIZE * dpr;
+  canvas.style.width = SIZE + "px";
+  canvas.style.height = SIZE + "px";
+  ctx.scale(dpr, dpr);
+
+  const COUNT = 480;
+  const GOLDEN_ANGLE = Math.PI * (3 - Math.sqrt(5));
+  const dirs = [], baseRadius = [], phase = [], amp = [];
+  for (let i = 0; i < COUNT; i++) {
+    const y = 1 - (i / (COUNT - 1)) * 2;
+    const r = Math.sqrt(Math.max(0, 1 - y * y));
+    const theta = GOLDEN_ANGLE * i;
+    dirs.push(Math.cos(theta) * r, y, Math.sin(theta) * r);
+    baseRadius.push(1 + (Math.random() - 0.5) * 0.05);
+    phase.push(Math.random() * Math.PI * 2);
+    amp.push(0.04 + Math.random() * 0.1);
+  }
+
+  const SPRITE_SIZE = 28;
+  const sprite = document.createElement("canvas");
+  sprite.width = sprite.height = SPRITE_SIZE;
+  const sctx = sprite.getContext("2d");
+  const half = SPRITE_SIZE / 2;
+  const grad = sctx.createRadialGradient(half, half, 0, half, half, half);
+  grad.addColorStop(0, "rgba(143,227,255,0.9)");
+  grad.addColorStop(0.25, "rgba(95,184,224,0.65)");
+  grad.addColorStop(0.6, "rgba(95,184,224,0.16)");
+  grad.addColorStop(1, "rgba(95,184,224,0)");
+  sctx.fillStyle = grad;
+  sctx.fillRect(0, 0, SPRITE_SIZE, SPRITE_SIZE);
+
+  const CAMERA_Z = 3.2;
+  const FOCAL = (SIZE / 2) / Math.tan((55 / 2) * Math.PI / 180);
+  let rotY = 0, waveTime = 0, last = 0;
+  const start = performance.now();
+
+  function frame() {
+    requestAnimationFrame(frame);
+    const t = (performance.now() - start) / 1000;
+    const dt = Math.min(0.05, Math.max(0, t - last));
+    last = t;
+    rotY += 0.2 * dt;
+    waveTime += 1.3 * dt;
+    const cosY = Math.cos(rotY), sinY = Math.sin(rotY);
+    const rotX = Math.sin(t * 0.2) * 0.15;
+    const cosX = Math.cos(rotX), sinX = Math.sin(rotX);
+
+    ctx.clearRect(0, 0, SIZE, SIZE);
+    ctx.globalCompositeOperation = "lighter";
+
+    const glowR = (1.6 * FOCAL) / (2 * CAMERA_Z);
+    const glow = ctx.createRadialGradient(SIZE/2, SIZE/2, 0, SIZE/2, SIZE/2, glowR);
+    glow.addColorStop(0, "rgba(95,184,224,0.28)");
+    glow.addColorStop(0.4, "rgba(95,184,224,0.09)");
+    glow.addColorStop(1, "rgba(95,184,224,0)");
+    ctx.fillStyle = glow;
+    ctx.beginPath();
+    ctx.arc(SIZE/2, SIZE/2, glowR, 0, Math.PI*2);
+    ctx.fill();
+
+    ctx.globalAlpha = 0.6;
+    for (let i = 0; i < COUNT; i++) {
+      const wob = Math.sin(waveTime + phase[i]);
+      const r = baseRadius[i] + amp[i] * 0.3 * wob;
+      const x = dirs[i*3] * r, y = dirs[i*3+1] * r, z = dirs[i*3+2] * r;
+      const x1 = x * cosY + z * sinY;
+      const z1 = -x * sinY + z * cosY;
+      const y2 = y * cosX - z1 * sinX;
+      const z2 = y * sinX + z1 * cosX;
+      const depth = CAMERA_Z - z2;
+      if (depth <= 0.1) continue;
+      const sx = SIZE/2 + (x1 * FOCAL) / depth;
+      const sy = SIZE/2 - (y2 * FOCAL) / depth;
+      const s = 3.6 * (CAMERA_Z / depth);
+      ctx.drawImage(sprite, sx - s/2, sy - s/2, s, s);
+    }
+    ctx.globalAlpha = 1;
+  }
+  frame();
+</script>
+
+</body>
+</html>

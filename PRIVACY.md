@@ -11,6 +11,7 @@ Lumen has no language model and stores nothing about you. These are the
 | When | What happens |
 |---|---|
 | **First time Lumen speaks** | Downloads its voice model (a public, open-source model) once. After that, voice synthesis is fully offline. |
+| **On launch, and every few hours** | Lumen checks this GitHub repository's releases for a newer version. If one exists, it downloads and installs it automatically — no click needed. Nothing about you or your machine is sent, just a request for "is there a version newer than mine". |
 | **Weather…** | The city name you type is sent to [Open-Meteo](https://open-meteo.com/), a free public weather API, to look up conditions. Nothing else is sent. |
 | **Web Search…** | Your default browser opens a search on DuckDuckGo for whatever you typed — the same as if you'd typed it into your browser yourself. |
 

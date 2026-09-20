@@ -96,13 +96,16 @@ works fully offline.
 
 ### Privacy at a glance
 
-- **No accounts, no API keys, no telemetry, no analytics, no auto-update.**
+- **No accounts, no API keys, no telemetry, no analytics.**
 - **No language model runs anywhere** — every command is a small, fixed
   routine, not an AI deciding what to do.
 - The voice (text-to-speech) runs **on-device**, after a one-time download.
-- The only network use, ever: that one-time voice download, and the two
-  commands that are explicitly about the outside world (**Weather**,
-  **Web Search**).
+- Lumen **updates itself** — it checks GitHub quietly in the background and
+  installs new versions on its own, so you never have to come back here to
+  grab a fix.
+- The only network use, ever: that one-time voice download, the update
+  check, and the two commands that are explicitly about the outside world
+  (**Weather**, **Web Search**).
 
 Full detail: [PRIVACY.md](PRIVACY.md).
 

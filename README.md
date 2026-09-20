@@ -1,5 +1,7 @@
 # Lumen — Desktop Orb
 
+🌐 **[English](README.md)** · [Italiano](translations/README.it.md) · [Français](translations/README.fr.md) · [Español](translations/README.es.md) · [Deutsch](translations/README.de.md) · [हिन्दी](translations/README.hi.md)
+
 [![Website](https://img.shields.io/badge/Website-lumen--orb-38bdf8)](https://alex-stark-industries.github.io/Lumen-Desktop-Orb/)
 [![Download](https://img.shields.io/badge/Download-Latest%20Release-38bdf8?logo=github)](../../releases/latest)
 [![License](https://img.shields.io/badge/License-Free%20to%20use-2ea44f)](LICENSE)
@@ -118,7 +120,3 @@ no reselling, no modification. See the full terms in [LICENSE](LICENSE).
 
 *Not affiliated with, sponsored by, or associated with any film, game,
 franchise, or brand. "Lumen" is simply Latin for "light".*
-
----
-
-Read this in another language: [Italiano](translations/README.it.md) · [Français](translations/README.fr.md) · [Español](translations/README.es.md) · [Deutsch](translations/README.de.md) · [हिन्दी](translations/README.hi.md)

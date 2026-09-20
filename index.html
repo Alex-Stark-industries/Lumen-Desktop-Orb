@@ -86,7 +86,10 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.35);
+    /* No text-stroke — on a bold display face at this size it outlines each
+       glyph individually and the strokes visibly double up where letters
+       sit close together, reading as broken/overlapping instead of one
+       solid wordmark. The gradient fill alone reads as a single clean shape. */
     text-shadow: 0 0 50px rgba(200, 210, 220, 0.25);
   }
   .eyebrow {

@@ -77,15 +77,17 @@
     line-height: 1;
     letter-spacing: 0.01em;
     margin: 4px 0 6px;
-    /* A glassy, translucent fill instead of a solid colour — light at top,
-       fading toward the accent, with a thin luminous outline. This is the
-       one "particular" typographic moment on the page. */
-    background: linear-gradient(180deg, rgba(231,243,251,0.95) 0%, rgba(143,227,255,0.55) 55%, rgba(95,184,224,0.25) 100%);
+    /* Brushed-metal chrome, not a blue tint — alternating light/dark grey
+       bands (the classic Premiere-style metallic gradient) instead of a
+       single smooth fade, so the letterforms read as polished steel. */
+    background: linear-gradient(180deg,
+      #f2f2f2 0%, #bdbdbd 14%, #ffffff 28%, #8f8f8f 42%,
+      #e6e6e6 54%, #6e6e6e 68%, #d4d4d4 82%, #9a9a9a 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    -webkit-text-stroke: 1px rgba(143, 227, 255, 0.45);
-    text-shadow: 0 0 70px rgba(95, 184, 224, 0.3);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.35);
+    text-shadow: 0 0 50px rgba(200, 210, 220, 0.25);
   }
   .eyebrow {
     display: inline-block; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;

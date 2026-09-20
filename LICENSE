@@ -1,21 +1,86 @@
-MIT License
+# Lumen — License & Terms of Use
 
-Copyright (c) 2026 Lumen
+Copyright (c) 2026 Alex-Stark-industries ("we", "us", "the licensor"). All
+rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This is a licence agreement, not a sale. Downloading, installing, or running
+Lumen means you accept these terms.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## 1. Grant of licence
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+We grant you a personal, non-exclusive, non-transferable, revocable licence
+to install and run Lumen, in the form we distribute it (a compiled
+application), for your own use.
+
+## 2. Ownership
+
+Lumen — its code, design, name, and branding — is owned by the licensor.
+This licence gives you permission to use the software; it does not transfer
+any ownership, copyright, or other intellectual property right to you.
+
+## 3. What you may not do
+
+You may not, without our prior written permission:
+
+- copy, redistribute, sell, rent, lease, sublicense, or otherwise make
+  Lumen (in whole or in part) available to any third party;
+- reverse-engineer, decompile, or disassemble Lumen, except to the limited
+  extent applicable law makes this restriction unenforceable;
+- modify, adapt, or create derivative works based on Lumen;
+- remove, obscure, or alter any copyright, trademark, or proprietary notice;
+- use Lumen for any unlawful purpose.
+
+## 4. Current pricing and future versions
+
+Lumen is currently provided **free of charge**. This does not entitle you to
+any future version, update, or feature free of charge — we may offer future
+versions, updates, or related products under different terms, including for
+payment, at our sole discretion. This licence governs the version of Lumen
+you downloaded; it does not guarantee access to anything released later.
+
+## 5. No warranty
+
+LUMEN IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR
+A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. We do not warrant that Lumen
+will be error-free, uninterrupted, or meet your requirements.
+
+## 6. Limitation of liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL THE LICENSOR OR
+ITS CONTRIBUTORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL,
+CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF DATA, PROFITS,
+REVENUE, OR BUSINESS, ARISING FROM OR IN CONNECTION WITH THE SOFTWARE OR
+ITS USE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. BECAUSE THE
+SOFTWARE IS CURRENTLY PROVIDED FREE OF CHARGE, THE LICENSOR'S TOTAL
+AGGREGATE LIABILITY TO YOU FOR ALL CLAIMS SHALL NOT EXCEED THE AMOUNT YOU
+PAID FOR THE SOFTWARE (IF ANY). Nothing in this Agreement excludes
+liability that cannot lawfully be excluded. You agree to indemnify and hold
+the licensor harmless from any claim arising out of your use of Lumen or
+your breach of this Agreement.
+
+## 7. Not affiliated with any brand or media property
+
+Lumen is an independent, local-first application. It is **not affiliated
+with, endorsed by, or sponsored by** any film, franchise, comic, studio, or
+other media property, and any thematic resemblance is coincidental. All
+third-party names and trademarks belong to their respective owners.
+
+## 8. Data
+
+See [PRIVACY.md](PRIVACY.md) for what Lumen does and does not do with your
+data.
+
+## 9. Termination
+
+This licence terminates automatically if you breach any term of this
+Agreement, or we may terminate it at our discretion. On termination you
+must stop using and delete Lumen. Sections 2, 3, 5, 6, and 7 survive
+termination.
+
+## 10. Changes, governing law & severability
+
+We may update these terms; the current version is the one published in this
+repository. If any provision of this Agreement is found unenforceable, the
+remaining provisions remain in full effect. For licensing or legal
+questions, contact us through the project's GitHub repository.

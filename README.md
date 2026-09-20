@@ -2,7 +2,7 @@
 
 [![Website](https://img.shields.io/badge/Website-lumen--orb-38bdf8)](https://alex-stark-industries.github.io/Lumen-Desktop-Orb/)
 [![Download](https://img.shields.io/badge/Download-Latest%20Release-38bdf8?logo=github)](../../releases/latest)
-[![License](https://img.shields.io/badge/License-MIT-2ea44f)](LICENSE)
+[![License](https://img.shields.io/badge/License-Free%20to%20use-2ea44f)](LICENSE)
 [![Platform](https://img.shields.io/badge/Windows-10%20%2F%2011-0078D6?logo=windows)](../../releases/latest)
 
 **A tiny voice orb that lives on your desktop.**
@@ -74,7 +74,9 @@ fully offline.
 |---|---|
 | [Welcome guide](WELCOME.md) | Beginner, step-by-step: install, run, your first command |
 | [Command guide](GUIDE.md) | Every command, what it does, and how to use it |
-| [License](LICENSE) | MIT — free to use |
+| [Privacy](PRIVACY.md) | Exactly what does (and doesn't) touch the network |
+| [License](LICENSE) | Free to use — full terms |
+| [Third-party notices](THIRD-PARTY-NOTICES.md) | Open-source components Lumen is built with |
 
 ---
 
@@ -102,11 +104,14 @@ works fully offline.
   commands that are explicitly about the outside world (**Weather**,
   **Web Search**).
 
+Full detail: [PRIVACY.md](PRIVACY.md).
+
 ---
 
 ### License
 
-MIT — free to use, copy, and share. See [LICENSE](LICENSE).
+Free to use — but this is a licence, not open source: no redistribution,
+no reselling, no modification. See the full terms in [LICENSE](LICENSE).
 
 *Not affiliated with, sponsored by, or associated with any film, game,
 franchise, or brand. "Lumen" is simply Latin for "light".*

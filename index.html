@@ -8,7 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%2348b0e0%22/></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #070b12;
@@ -22,14 +22,23 @@
     --accent-glow: rgba(95, 184, 224, 0.35);
   }
   * { box-sizing: border-box; }
-  html, body {
+  html { scroll-behavior: smooth; }
+  body {
     margin: 0; padding: 0;
-    background: var(--bg);
     color: var(--text);
     font-family: 'Inter', system-ui, sans-serif;
-    scroll-behavior: smooth;
+    /* A layered gradient instead of a flat panel — a cool light-grey wash in
+       one corner, the brand's cyan glow in another, over a dark navy-to-
+       charcoal base. Fixed so it reads as one continuous backdrop behind
+       every section, not a hero-only effect. */
+    background:
+      radial-gradient(1100px 620px at 12% -8%, rgba(163,177,194,0.12), transparent 60%),
+      radial-gradient(1000px 700px at 88% 6%, rgba(95,184,224,0.14), transparent 60%),
+      linear-gradient(180deg, #0a0d12 0%, #10151d 45%, #0a0d12 100%);
+    background-attachment: fixed;
   }
-  h1, h2, h3, .brand { font-family: 'Outfit', system-ui, sans-serif; }
+  h1, h2, h3 { font-family: 'Outfit', system-ui, sans-serif; }
+  .brand { font-family: 'Outfit', system-ui, sans-serif; }
   a { color: var(--accent-bright); }
   .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
 
@@ -40,11 +49,9 @@
     border-bottom: 1px solid var(--border);
   }
   .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1040px; margin: 0 auto; }
-  .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 18px; letter-spacing: 0.02em; }
-  .brand-dot {
-    width: 14px; height: 14px; border-radius: 50%;
-    background: radial-gradient(circle at 35% 30%, var(--accent-bright), var(--accent) 60%, #1c3c58);
-    box-shadow: 0 0 14px var(--accent-glow);
+  .brand {
+    font-weight: 500; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--muted);
   }
   .nav-links { display: flex; gap: 28px; font-size: 14px; color: var(--muted); }
   .nav-links a { color: var(--muted); text-decoration: none; }
@@ -62,7 +69,24 @@
     background: radial-gradient(ellipse at 50% 0%, rgba(95,184,224,0.16), transparent 70%);
     pointer-events: none;
   }
-  #hero-orb { display: block; margin: 0 auto 28px; }
+  #hero-orb { display: block; margin: 0 auto 8px; }
+  .wordmark {
+    font-family: 'Unbounded', 'Outfit', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: clamp(56px, 11vw, 128px);
+    line-height: 1;
+    letter-spacing: 0.01em;
+    margin: 4px 0 6px;
+    /* A glassy, translucent fill instead of a solid colour — light at top,
+       fading toward the accent, with a thin luminous outline. This is the
+       one "particular" typographic moment on the page. */
+    background: linear-gradient(180deg, rgba(231,243,251,0.95) 0%, rgba(143,227,255,0.55) 55%, rgba(95,184,224,0.25) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(143, 227, 255, 0.45);
+    text-shadow: 0 0 70px rgba(95, 184, 224, 0.3);
+  }
   .eyebrow {
     display: inline-block; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
     color: var(--accent-bright); border: 1px solid var(--border); border-radius: 999px;
@@ -146,7 +170,7 @@
 
 <header>
   <div class="nav">
-    <div class="brand"><span class="brand-dot"></span> Lumen</div>
+    <div class="brand">Lumen</div>
     <nav class="nav-links">
       <a href="#features">Features</a>
       <a href="#screenshots">Screenshots</a>
@@ -157,6 +181,7 @@
 </header>
 
 <section class="hero">
+  <div class="wordmark">Lumen</div>
   <canvas id="hero-orb" width="160" height="160"></canvas>
   <div class="eyebrow">Free · Windows · No account</div>
   <h1>A tiny voice orb that<br><span class="glow">lives on your desktop.</span></h1>
@@ -257,13 +282,14 @@
 </section>
 
 <footer>
-  <div class="brand" style="justify-content:center; margin-bottom: 8px;"><span class="brand-dot"></span> Lumen</div>
-  <p>Free and open, MIT licensed. Not affiliated with, sponsored by, or
-    associated with any film, game, franchise, or brand. "Lumen" is simply
-    Latin for "light".</p>
+  <div class="brand" style="text-align:center; margin-bottom: 8px;">Lumen</div>
+  <p>Free to use. Not affiliated with, sponsored by, or associated with any
+    film, game, franchise, or brand. "Lumen" is simply Latin for "light".</p>
   <p><a href="https://github.com/Alex-Stark-industries/Lumen-Desktop-Orb">GitHub</a> ·
     <a href="https://github.com/Alex-Stark-industries/Lumen-Desktop-Orb/blob/main/WELCOME.md">Welcome guide</a> ·
-    <a href="https://github.com/Alex-Stark-industries/Lumen-Desktop-Orb/blob/main/GUIDE.md">Command guide</a></p>
+    <a href="https://github.com/Alex-Stark-industries/Lumen-Desktop-Orb/blob/main/GUIDE.md">Command guide</a> ·
+    <a href="https://github.com/Alex-Stark-industries/Lumen-Desktop-Orb/blob/main/PRIVACY.md">Privacy</a> ·
+    <a href="https://github.com/Alex-Stark-industries/Lumen-Desktop-Orb/blob/main/LICENSE">License</a></p>
 </footer>
 
 <script>

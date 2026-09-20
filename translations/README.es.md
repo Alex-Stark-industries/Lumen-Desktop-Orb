@@ -1,9 +1,9 @@
 # Lumen — Desktop Orb
 
 [![Website](https://img.shields.io/badge/Website-lumen--orb-38bdf8)](https://alex-stark-industries.github.io/Lumen-Desktop-Orb/)
-[![Download](https://img.shields.io/badge/Download-Latest%20Release-38bdf8?logo=github)](../../releases/latest)
-[![License](https://img.shields.io/badge/License-Free%20to%20use-2ea44f)](LICENSE)
-[![Platform](https://img.shields.io/badge/Windows-10%20%2F%2011-0078D6?logo=windows)](../../releases/latest)
+[![Download](https://img.shields.io/badge/Download-Latest%20Release-38bdf8?logo=github)](../../../releases/latest)
+[![License](https://img.shields.io/badge/License-Free%20to%20use-2ea44f)](../LICENSE)
+[![Platform](https://img.shields.io/badge/Windows-10%20%2F%2011-0078D6?logo=windows)](../../../releases/latest)
 
 **Una pequeña esfera de voz que vive en tu escritorio.**
 Clic derecho para un menú de comandos rápidos — la hora, el estado del sistema,
@@ -33,13 +33,13 @@ el clima, una búsqueda web, abrir cualquier app por su nombre — cada uno resp
 <td width="50%">
 
 **El orbe** — inactivo, flotando tranquilamente en el escritorio.
-<img src="docs/screenshots/orb.png" alt="Lumen desktop orb" width="100%">
+<img src="../docs/screenshots/orb.png" alt="Lumen desktop orb" width="100%">
 
 </td>
 <td width="50%">
 
 **Menú del clic derecho** — cada comando, a un clic de distancia.
-<img src="docs/screenshots/menu.png" alt="Lumen right-click command menu" width="100%">
+<img src="../docs/screenshots/menu.png" alt="Lumen right-click command menu" width="100%">
 
 </td>
 </tr>
@@ -49,7 +49,7 @@ el clima, una búsqueda web, abrir cualquier app por su nombre — cada uno resp
 
 ### Descarga e instalación
 
-1. Abre la página de [**Releases**](../../releases/latest) y descarga
+1. Abre la página de [**Releases**](../../../releases/latest) y descarga
    `Lumen Setup <versión>.exe`.
 2. Ejecútalo. El instalador es **por usuario** — **no necesita permisos de administrador**.
 3. Lumen aparece como una pequeña esfera luminosa en la esquina inferior derecha de tu pantalla.
@@ -58,7 +58,7 @@ el clima, una búsqueda web, abrir cualquier app por su nombre — cada uno resp
 > puede mostrar *"Windows protegió tu PC"*. Haz clic en **Más información → Ejecutar de todos modos**.
 > Es normal para una app gratuita e independiente.
 
-¿Nuevo por aquí? La [**Guía de bienvenida**](WELCOME.md) explica paso a paso
+¿Nuevo por aquí? La [**Guía de bienvenida**](../WELCOME.md) explica paso a paso
 la instalación y tu primer comando, sin dar nada por sentado.
 
 **No hace falta ninguna otra configuración** — a diferencia de los asistentes de IA más grandes,
@@ -72,11 +72,11 @@ después es instantáneo y totalmente sin conexión.
 
 | Documento | Qué cubre |
 |---|---|
-| [Guía de bienvenida](WELCOME.md) | Para principiantes, paso a paso: instalación, ejecución, primer comando |
-| [Guía de comandos](GUIDE.md) | Cada comando, qué hace y cómo usarlo |
-| [Privacidad](PRIVACY.md) | Exactamente qué toca (y qué no toca) la red |
-| [Licencia](LICENSE) | Gratis — términos completos |
-| [Avisos de terceros](THIRD-PARTY-NOTICES.md) | Componentes de código abierto con los que está construido Lumen |
+| [Guía de bienvenida](../WELCOME.md) | Para principiantes, paso a paso: instalación, ejecución, primer comando |
+| [Guía de comandos](../GUIDE.md) | Cada comando, qué hace y cómo usarlo |
+| [Privacidad](../PRIVACY.md) | Exactamente qué toca (y qué no toca) la red |
+| [Licencia](../LICENSE) | Gratis — términos completos |
+| [Avisos de terceros](../THIRD-PARTY-NOTICES.md) | Componentes de código abierto con los que está construido Lumen |
 
 ---
 
@@ -107,18 +107,18 @@ funciona completamente sin conexión.
   de actualizaciones, y los dos comandos explícitamente sobre el mundo exterior
   (**Clima**, **Búsqueda web**).
 
-Detalles completos: [PRIVACY.md](PRIVACY.md).
+Detalles completos: [PRIVACY.md](../PRIVACY.md).
 
 ---
 
 ### Licencia
 
 Gratis — pero es una licencia, no software libre: sin redistribución,
-sin reventa, sin modificación. Consulta los términos completos en [LICENSE](LICENSE).
+sin reventa, sin modificación. Consulta los términos completos en [LICENSE](../LICENSE).
 
 *No afiliada, patrocinada ni asociada con ninguna película, juego,
 franquicia o marca. "Lumen" es simplemente latín para "luz".*
 
 ---
 
-Leer en otro idioma: [English](README.md) · [Italiano](README.it.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [हिन्दी](README.hi.md)
+Leer en otro idioma: [English](../README.md) · [Italiano](README.it.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [हिन्दी](README.hi.md)

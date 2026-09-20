@@ -1,9 +1,9 @@
 # Lumen — Desktop Orb
 
 [![Website](https://img.shields.io/badge/Website-lumen--orb-38bdf8)](https://alex-stark-industries.github.io/Lumen-Desktop-Orb/)
-[![Download](https://img.shields.io/badge/Download-Latest%20Release-38bdf8?logo=github)](../../releases/latest)
-[![License](https://img.shields.io/badge/License-Free%20to%20use-2ea44f)](LICENSE)
-[![Platform](https://img.shields.io/badge/Windows-10%20%2F%2011-0078D6?logo=windows)](../../releases/latest)
+[![Download](https://img.shields.io/badge/Download-Latest%20Release-38bdf8?logo=github)](../../../releases/latest)
+[![License](https://img.shields.io/badge/License-Free%20to%20use-2ea44f)](../LICENSE)
+[![Platform](https://img.shields.io/badge/Windows-10%20%2F%2011-0078D6?logo=windows)](../../../releases/latest)
 
 **Une petite sphère vocale qui vit sur votre bureau.**
 Clic droit pour un menu de commandes rapides — l'heure, l'état du système,
@@ -33,13 +33,13 @@ chacune avec une réponse **instantanée** et **prononcée à voix haute** par u
 <td width="50%">
 
 **L'orbe** — au repos, dérivant tranquillement sur le bureau.
-<img src="docs/screenshots/orb.png" alt="Lumen desktop orb" width="100%">
+<img src="../docs/screenshots/orb.png" alt="Lumen desktop orb" width="100%">
 
 </td>
 <td width="50%">
 
 **Menu du clic droit** — chaque commande à portée d'un clic.
-<img src="docs/screenshots/menu.png" alt="Lumen right-click command menu" width="100%">
+<img src="../docs/screenshots/menu.png" alt="Lumen right-click command menu" width="100%">
 
 </td>
 </tr>
@@ -49,7 +49,7 @@ chacune avec une réponse **instantanée** et **prononcée à voix haute** par u
 
 ### Téléchargement et installation
 
-1. Ouvrez la page des [**Releases**](../../releases/latest) et téléchargez
+1. Ouvrez la page des [**Releases**](../../../releases/latest) et téléchargez
    `Lumen Setup <version>.exe`.
 2. Lancez-le. L'installateur est **par utilisateur** — **aucun droit administrateur requis**.
 3. Lumen apparaît sous forme d'une petite sphère lumineuse en bas à droite de l'écran.
@@ -58,7 +58,7 @@ chacune avec une réponse **instantanée** et **prononcée à voix haute** par u
 > peut afficher *« Windows a protégé votre PC »*. Cliquez sur **Informations complémentaires → Exécuter quand même**.
 > C'est normal pour une application gratuite et indépendante.
 
-Nouveau ici ? Le [**Guide de bienvenue**](WELCOME.md) accompagne pas à pas
+Nouveau ici ? Le [**Guide de bienvenue**](../WELCOME.md) accompagne pas à pas
 l'installation et la première commande, sans rien présumer.
 
 **Aucune autre configuration nécessaire** — contrairement aux assistants IA plus lourds,
@@ -72,11 +72,11 @@ ensuite est instantané et entièrement hors ligne.
 
 | Document | Contenu |
 |---|---|
-| [Guide de bienvenue](WELCOME.md) | Pour débutants, étape par étape : installation, lancement, première commande |
-| [Guide des commandes](GUIDE.md) | Chaque commande, ce qu'elle fait et comment l'utiliser |
-| [Confidentialité](PRIVACY.md) | Exactement ce qui touche (et ne touche pas) le réseau |
-| [Licence](LICENSE) | Gratuite — conditions complètes |
-| [Mentions tierces](THIRD-PARTY-NOTICES.md) | Composants open source utilisés par Lumen |
+| [Guide de bienvenue](../WELCOME.md) | Pour débutants, étape par étape : installation, lancement, première commande |
+| [Guide des commandes](../GUIDE.md) | Chaque commande, ce qu'elle fait et comment l'utiliser |
+| [Confidentialité](../PRIVACY.md) | Exactement ce qui touche (et ne touche pas) le réseau |
+| [Licence](../LICENSE) | Gratuite — conditions complètes |
+| [Mentions tierces](../THIRD-PARTY-NOTICES.md) | Composants open source utilisés par Lumen |
 
 ---
 
@@ -107,18 +107,18 @@ fonctionne entièrement hors ligne.
   de mise à jour, et les deux commandes explicitement tournées vers le monde extérieur
   (**Météo**, **Recherche web**).
 
-Détails complets : [PRIVACY.md](PRIVACY.md).
+Détails complets : [PRIVACY.md](../PRIVACY.md).
 
 ---
 
 ### Licence
 
 Gratuite — mais c'est une licence, pas un logiciel open source : aucune redistribution,
-aucune revente, aucune modification. Voir les conditions complètes dans [LICENSE](LICENSE).
+aucune revente, aucune modification. Voir les conditions complètes dans [LICENSE](../LICENSE).
 
 *Non affiliée, non sponsorisée et non associée à un film, un jeu,
 une franchise ou une marque quelconque. « Lumen » signifie simplement « lumière » en latin.*
 
 ---
 
-Lire dans une autre langue : [English](README.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [हिन्दी](README.hi.md)
+Lire dans une autre langue : [English](../README.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [हिन्दी](README.hi.md)

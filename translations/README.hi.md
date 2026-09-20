@@ -1,9 +1,9 @@
 # Lumen — Desktop Orb
 
 [![Website](https://img.shields.io/badge/Website-lumen--orb-38bdf8)](https://alex-stark-industries.github.io/Lumen-Desktop-Orb/)
-[![Download](https://img.shields.io/badge/Download-Latest%20Release-38bdf8?logo=github)](../../releases/latest)
-[![License](https://img.shields.io/badge/License-Free%20to%20use-2ea44f)](LICENSE)
-[![Platform](https://img.shields.io/badge/Windows-10%20%2F%2011-0078D6?logo=windows)](../../releases/latest)
+[![Download](https://img.shields.io/badge/Download-Latest%20Release-38bdf8?logo=github)](../../../releases/latest)
+[![License](https://img.shields.io/badge/License-Free%20to%20use-2ea44f)](../LICENSE)
+[![Platform](https://img.shields.io/badge/Windows-10%20%2F%2011-0078D6?logo=windows)](../../../releases/latest)
 
 **आपके डेस्कटॉप पर रहने वाला एक छोटा-सा वॉइस ऑर्ब।**
 राइट-क्लिक करें और झटपट कमांड्स का मेनू पाएं — समय, सिस्टम स्टेटस,
@@ -33,13 +33,13 @@
 <td width="50%">
 
 **ऑर्ब** — निष्क्रिय अवस्था में, डेस्कटॉप पर शांति से तैरता हुआ।
-<img src="docs/screenshots/orb.png" alt="Lumen desktop orb" width="100%">
+<img src="../docs/screenshots/orb.png" alt="Lumen desktop orb" width="100%">
 
 </td>
 <td width="50%">
 
 **राइट-क्लिक मेनू** — हर कमांड, बस एक क्लिक दूर।
-<img src="docs/screenshots/menu.png" alt="Lumen right-click command menu" width="100%">
+<img src="../docs/screenshots/menu.png" alt="Lumen right-click command menu" width="100%">
 
 </td>
 </tr>
@@ -49,7 +49,7 @@
 
 ### डाउनलोड और इंस्टॉल
 
-1. [**Releases**](../../releases/latest) पेज खोलें और
+1. [**Releases**](../../../releases/latest) पेज खोलें और
    `Lumen Setup <version>.exe` डाउनलोड करें।
 2. इसे चलाएँ। इंस्टॉलर **प्रति-यूज़र** है — इसके लिए **एडमिन अधिकारों की ज़रूरत नहीं**।
 3. Lumen आपकी स्क्रीन के नीचे-दाईं ओर एक छोटी चमकती हुई गेंद के रूप में दिखाई देता है।
@@ -58,7 +58,7 @@
 > *"Windows ने आपके PC को सुरक्षित रखा"* जैसा संदेश दिखा सकता है। **More info → Run anyway** पर क्लिक करें।
 > एक मुफ़्त, स्वतंत्र ऐप के लिए यह सामान्य बात है।
 
-यहाँ नए हैं? [**वेलकम गाइड**](WELCOME.md) कुछ भी मान लिए बिना, कदम-दर-कदम
+यहाँ नए हैं? [**वेलकम गाइड**](../WELCOME.md) कुछ भी मान लिए बिना, कदम-दर-कदम
 इंस्टॉलेशन और आपके पहले कमांड में मदद करती है।
 
 **किसी और सेटअप की ज़रूरत नहीं** — बड़े AI असिस्टेंट्स के उलट, Lumen को पहले
@@ -72,11 +72,11 @@
 
 | दस्तावेज़ | इसमें क्या है |
 |---|---|
-| [वेलकम गाइड](WELCOME.md) | शुरुआती लोगों के लिए, कदम-दर-कदम: इंस्टॉल, चलाना, पहला कमांड |
-| [कमांड गाइड](GUIDE.md) | हर कमांड, वह क्या करता है और उसका इस्तेमाल कैसे करें |
-| [प्राइवेसी](PRIVACY.md) | बिल्कुल सटीक रूप से क्या नेटवर्क को छूता है (और क्या नहीं) |
-| [लाइसेंस](LICENSE) | मुफ़्त इस्तेमाल — पूरी शर्तें |
-| [थर्ड-पार्टी नोटिस](THIRD-PARTY-NOTICES.md) | वे ओपन-सोर्स कॉम्पोनेंट्स जिनसे Lumen बनी है |
+| [वेलकम गाइड](../WELCOME.md) | शुरुआती लोगों के लिए, कदम-दर-कदम: इंस्टॉल, चलाना, पहला कमांड |
+| [कमांड गाइड](../GUIDE.md) | हर कमांड, वह क्या करता है और उसका इस्तेमाल कैसे करें |
+| [प्राइवेसी](../PRIVACY.md) | बिल्कुल सटीक रूप से क्या नेटवर्क को छूता है (और क्या नहीं) |
+| [लाइसेंस](../LICENSE) | मुफ़्त इस्तेमाल — पूरी शर्तें |
+| [थर्ड-पार्टी नोटिस](../THIRD-PARTY-NOTICES.md) | वे ओपन-सोर्स कॉम्पोनेंट्स जिनसे Lumen बनी है |
 
 ---
 
@@ -107,18 +107,18 @@
   और वे दो कमांड्स जो साफ़ तौर पर बाहरी दुनिया से जुड़े हैं
   (**Weather**, **Web Search**)।
 
-पूरी जानकारी: [PRIVACY.md](PRIVACY.md)।
+पूरी जानकारी: [PRIVACY.md](../PRIVACY.md)।
 
 ---
 
 ### लाइसेंस
 
 मुफ़्त इस्तेमाल के लिए — लेकिन यह एक लाइसेंस है, ओपन सोर्स नहीं: न पुनर्वितरण,
-न पुनर्विक्रय, न बदलाव। पूरी शर्तों के लिए देखें [LICENSE](LICENSE)।
+न पुनर्विक्रय, न बदलाव। पूरी शर्तों के लिए देखें [LICENSE](../LICENSE)।
 
 *किसी भी फ़िल्म, गेम, फ़्रैंचाइज़ या ब्रांड से न तो संबद्ध है, न प्रायोजित,
 न जुड़ा हुआ। "Lumen" लैटिन में बस "रोशनी" के लिए है।*
 
 ---
 
-किसी और भाषा में पढ़ें: [English](README.md) · [Italiano](README.it.md) · [Français](README.fr.md) · [Español](README.es.md) · [Deutsch](README.de.md)
+किसी और भाषा में पढ़ें: [English](../README.md) · [Italiano](README.it.md) · [Français](README.fr.md) · [Español](README.es.md) · [Deutsch](README.de.md)

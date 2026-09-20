@@ -121,4 +121,4 @@ franchise, or brand. "Lumen" is simply Latin for "light".*
 
 ---
 
-Read this in another language: [Italiano](README.it.md) · [Français](README.fr.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [हिन्दी](README.hi.md)
+Read this in another language: [Italiano](translations/README.it.md) · [Français](translations/README.fr.md) · [Español](translations/README.es.md) · [Deutsch](translations/README.de.md) · [हिन्दी](translations/README.hi.md)

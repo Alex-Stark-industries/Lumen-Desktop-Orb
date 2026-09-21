@@ -56,6 +56,11 @@ the weather, a web search, opening any app by name — each one answered
 2. Run it. The installer is **per-user** — it needs **no administrator rights**.
 3. Lumen appears as a small glowing orb in the bottom-right of your screen.
 
+> **Only one file to download.** Each release also lists `latest.yml` and a
+> `.blockmap` file — those aren't for you, they're metadata Lumen itself reads
+> in the background to check for and install updates automatically. The
+> `.exe` is the only thing you ever need to grab by hand.
+
 > **First launch:** the installer isn't code-signed, so Windows SmartScreen may
 > show *"Windows protected your PC"*. Click **More info → Run anyway**. This is
 > normal for a free, independent app.

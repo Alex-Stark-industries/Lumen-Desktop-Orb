@@ -56,6 +56,11 @@ chacune avec une réponse **instantanée** et **prononcée à voix haute** par u
 2. Lancez-le. L'installateur est **par utilisateur** — **aucun droit administrateur requis**.
 3. Lumen apparaît sous forme d'une petite sphère lumineuse en bas à droite de l'écran.
 
+> **Un seul fichier à télécharger.** Chaque version liste aussi `latest.yml`
+> et un fichier `.blockmap` — ils ne sont pas pour vous, ce sont des métadonnées
+> que Lumen lit elle-même en arrière-plan pour vérifier et installer les mises
+> à jour automatiquement. Le `.exe` est le seul fichier à télécharger à la main.
+
 > **Premier lancement :** l'installateur n'est pas signé numériquement, donc Windows SmartScreen
 > peut afficher *« Windows a protégé votre PC »*. Cliquez sur **Informations complémentaires → Exécuter quand même**.
 > C'est normal pour une application gratuite et indépendante.

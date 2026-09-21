@@ -56,6 +56,11 @@ risposta **istantanea** e **parlata ad alta voce** con una voce vera.
 2. Eseguilo. L'installer è **per singolo utente** — **non servono permessi di amministratore**.
 3. Lumen appare come una piccola sfera luminosa in basso a destra dello schermo.
 
+> **Un solo file da scaricare.** Ogni release elenca anche `latest.yml` e un
+> file `.blockmap` — non sono per te, sono metadati che Lumen legge da sola in
+> background per controllare e installare gli aggiornamenti automaticamente.
+> L'unica cosa da scaricare a mano è l'`.exe`.
+
 > **Primo avvio:** l'installer non è firmato digitalmente, quindi Windows SmartScreen
 > potrebbe mostrare *"Windows ha protetto il tuo PC"*. Clicca **Ulteriori informazioni → Esegui comunque**.
 > È normale per un'app gratuita e indipendente.

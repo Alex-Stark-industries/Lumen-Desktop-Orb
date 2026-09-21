@@ -23,6 +23,7 @@ next to the orb — type your answer and press Enter).
 |---|---|
 | **Volume Up** | Turns your system volume up one notch — the same as your keyboard's volume key. |
 | **Volume Down** | Turns your system volume down one notch. |
+| **Start with Windows: On/Off** | Toggles whether Lumen launches automatically when you log in. The label always shows the current state; off by default — Lumen never turns this on by itself. |
 
 ## Launching things
 
@@ -30,7 +31,7 @@ next to the orb — type your answer and press Enter).
 |---|---|
 | **Open Notepad** | Opens Notepad. |
 | **Open Calculator** | Opens the Calculator. |
-| **Open…** | Type the name of any installed app (or a folder, or a web address) and Lumen tries to open it — the same way Windows' own Run box (Win+R) resolves things. |
+| **Open…** | Type the name of any installed app (or a folder, or a web address) and Lumen tries to open it — the same way Windows' own Run box (Win+R) resolves things. If nothing by that name is found, Lumen tells you instead of staying silent. |
 
 ## Lookups
 

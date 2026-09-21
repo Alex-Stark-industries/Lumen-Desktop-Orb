@@ -56,6 +56,11 @@ el clima, una búsqueda web, abrir cualquier app por su nombre — cada uno resp
 2. Ejecútalo. El instalador es **por usuario** — **no necesita permisos de administrador**.
 3. Lumen aparece como una pequeña esfera luminosa en la esquina inferior derecha de tu pantalla.
 
+> **Solo un archivo para descargar.** Cada versión también lista `latest.yml`
+> y un archivo `.blockmap` — no son para ti, son metadatos que Lumen lee por
+> su cuenta en segundo plano para comprobar e instalar actualizaciones
+> automáticamente. El `.exe` es lo único que necesitas descargar a mano.
+
 > **Primer inicio:** el instalador no está firmado digitalmente, así que Windows SmartScreen
 > puede mostrar *"Windows protegió tu PC"*. Haz clic en **Más información → Ejecutar de todos modos**.
 > Es normal para una app gratuita e independiente.

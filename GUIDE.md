@@ -44,7 +44,7 @@ next to the orb — type your answer and press Enter).
 
 | Command | What it does |
 |---|---|
-| **About Lumen** | A short, fixed spoken introduction — what Lumen is (and isn't). Not a real question-answering command, just a scripted reply. |
+| **About Lumen** | A short, fixed spoken introduction — what Lumen is (and isn't) — including the version number currently running, the quickest way to check an auto-update actually landed. |
 
 ## Quit
 

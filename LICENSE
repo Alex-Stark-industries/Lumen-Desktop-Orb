@@ -66,10 +66,11 @@ with, endorsed by, or sponsored by** any film, franchise, comic, studio, or
 other media property, and any thematic resemblance is coincidental. All
 third-party names and trademarks belong to their respective owners.
 
-## 8. Data
+## 8. Data and third-party components
 
 See [PRIVACY.md](PRIVACY.md) for what Lumen does and does not do with your
-data.
+data, and [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) for the
+open-source components Lumen is built with and their licences.
 
 ## 9. Termination
 

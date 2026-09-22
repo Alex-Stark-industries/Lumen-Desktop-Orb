@@ -39,6 +39,7 @@ next to the orb — type your answer and press Enter).
 |---|---|
 | **Web Search…** | Type anything, and Lumen opens your default browser with a search for it. |
 | **Weather…** | Type a city name, and Lumen speaks the current temperature and conditions. |
+| **News Briefing** | Speaks the latest headline from NASA, the Federal Reserve, NIST, the Department of Labor, and NOAA, naming the sources at the end. See "Why only U.S. government sources?" below. |
 
 ## About
 
@@ -62,3 +63,13 @@ The three commands that need a word or two from you (**Open…**, **Web
 Search…**, **Weather…**) are the only ones where that fixed routine needs a
 detail only you can provide — everything else, Lumen already knows or can
 check on its own, instantly.
+
+### Why only U.S. government sources for News Briefing?
+
+Newspaper RSS feeds (BBC, the New York Times, and nearly every other major
+outlet checked) restrict their feeds to personal, non-commercial use, which
+Lumen — sold, not given away — can't honor. Works published by the U.S.
+federal government carry no copyright at all (17 U.S.C. §105), so they're
+free to read aloud without a license. That trade-off means a narrower topic
+range — science, economic data, technology — instead of general-interest
+news, but it's the one combination that's actually free to use.

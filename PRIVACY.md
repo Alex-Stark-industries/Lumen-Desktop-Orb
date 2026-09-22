@@ -14,6 +14,7 @@ Lumen has no language model and stores nothing about you. These are the
 | **On launch, and every few hours** | Lumen checks this GitHub repository's releases for a newer version. If one exists, it downloads and installs it automatically — no click needed. Nothing about you or your machine is sent, just a request for "is there a version newer than mine". |
 | **Weather…** | The city name you type is sent to [Open-Meteo](https://open-meteo.com/), a free public weather API, to look up conditions. Nothing else is sent. |
 | **Web Search…** | Your default browser opens a search on DuckDuckGo for whatever you typed — the same as if you'd typed it into your browser yourself. |
+| **News Briefing** | Fetches the latest item from five U.S. federal government RSS feeds (NASA, the Federal Reserve, NIST, the Department of Labor, and NOAA) and reads their headlines aloud. No search term or personal data is sent — it's the same fixed five feeds every time. |
 
 That's the complete list. Every other command — the clock, your system
 status, your battery, opening an app, adjusting volume, listing running
@@ -30,6 +31,12 @@ history, no settings tied to an account — because there is no account.
 - **Open-Meteo** (Weather) and **DuckDuckGo** (Web Search) are independent
   services with their own privacy practices; Lumen only sends them what's
   described above, and only when you use those specific commands.
+- **News Briefing** deliberately reads only U.S. federal government sources
+  (NASA, the Federal Reserve, NIST, the Department of Labor, NOAA) rather
+  than newspapers — those works
+  carry no copyright under U.S. law (17 U.S.C. §105) and are free to reuse,
+  including commercially, without needing a license. Most newspaper RSS
+  feeds restrict use to personal, non-commercial purposes.
 - The voice model is downloaded from its public hosting; no personal data
   is included in that request.
 

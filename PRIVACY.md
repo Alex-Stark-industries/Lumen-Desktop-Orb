@@ -12,13 +12,16 @@ Lumen has no language model and stores nothing about you. These are the
 |---|---|
 | **First time Lumen speaks** | Downloads its voice model (a public, open-source model) once. After that, voice synthesis is fully offline. |
 | **On launch, and every few hours** | Lumen checks this GitHub repository's releases for a newer version. If one exists, it downloads and installs it automatically — no click needed. Nothing about you or your machine is sent, just a request for "is there a version newer than mine". |
-| **Weather…** | The city name you type is sent to [Open-Meteo](https://open-meteo.com/), a free public weather API, to look up conditions. Nothing else is sent. |
+| **Weather…** | The city name you type is sent to [Open-Meteo](https://open-meteo.com/), a free public weather API, to look up conditions — and, for autocomplete, also sent (partial, as you type, debounced) to look up matching city names before you finish typing or submit. Nothing else is sent. |
 | **Web Search…** | Your default browser opens a search on DuckDuckGo for whatever you typed — the same as if you'd typed it into your browser yourself. |
 | **News Briefing** | Fetches the latest item from five U.S. federal government RSS feeds (NASA, the Federal Reserve, NIST, the Department of Labor, and NOAA) and reads their headlines aloud. No search term or personal data is sent — it's the same fixed five feeds every time. |
 
 That's the complete list. Every other command — the clock, your system
 status, your battery, opening an app, adjusting volume, listing running
 apps — runs entirely on your own machine and never touches the network.
+That includes **Open…**'s autocomplete: it matches against a list of your
+installed apps read from your own Start Menu, entirely locally — nothing
+about what you type there is ever sent anywhere.
 
 ## What Lumen stores
 

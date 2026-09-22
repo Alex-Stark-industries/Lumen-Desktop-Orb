@@ -7,6 +7,11 @@ as shown briefly above the orb.
 Commands marked **…** ask for one line of text first (a small box appears
 next to the orb — type your answer and press Enter).
 
+**Open…** and **Weather…** autocomplete as you type — the rest of the best
+match (an installed app, or a city) appears filled in and highlighted, the
+same way a browser's address bar completes a URL. Press **→** or **End**,
+or click past what you typed, to accept it; keep typing to ignore it.
+
 ## Info
 
 | Command | What it does |
@@ -31,14 +36,14 @@ next to the orb — type your answer and press Enter).
 |---|---|
 | **Open Notepad** | Opens Notepad. |
 | **Open Calculator** | Opens the Calculator. |
-| **Open…** | Type the name of any installed app (or a folder, or a web address) and Lumen tries to open it — the same way Windows' own Run box (Win+R) resolves things. If nothing by that name is found, Lumen tells you instead of staying silent. |
+| **Open…** | Type the name of any installed app (or a folder, or a web address) and Lumen tries to open it — the same way Windows' own Run box (Win+R) resolves things. If nothing by that name is found, Lumen tells you instead of staying silent. Autocompletes against your installed apps as you type. |
 
 ## Lookups
 
 | Command | What it does |
 |---|---|
 | **Web Search…** | Type anything, and Lumen opens your default browser with a search for it. |
-| **Weather…** | Type a city name, and Lumen speaks the current temperature and conditions. |
+| **Weather…** | Type a city name, and Lumen speaks the current temperature and conditions. Autocompletes against real city names as you type. |
 | **News Briefing** | Speaks the latest headline from NASA, the Federal Reserve, NIST, the Department of Labor, and NOAA, naming the sources at the end. See "Why only U.S. government sources?" below. |
 
 ## About
